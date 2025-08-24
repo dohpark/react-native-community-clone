@@ -29,6 +29,7 @@ export default function AuthLayout() {
         options={{
           title: "이메일 로그인",
           headerShown: true,
+          headerBackButtonDisplayMode: "minimal",
         }}
       />
     </Stack>
