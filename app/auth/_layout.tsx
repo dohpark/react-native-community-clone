@@ -18,7 +18,7 @@ export default function AuthLayout() {
           title: "로그인",
           headerShown: true,
           headerLeft: () => (
-            <Link href={"/"} replace>
+            <Link href={"/"} replace style={{ paddingRight: 8 }}>
               <Foundation name="home" size={28} color={colors.BLACK} />
             </Link>
           ),
