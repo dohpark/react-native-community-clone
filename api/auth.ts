@@ -1,3 +1,4 @@
+import { Profile } from "@/types";
 import { getSecureStore } from "@/utils/secureStore";
 import axiosInstance from "./axios";
 
@@ -18,7 +19,7 @@ async function postLogin(body: RequestUser): Promise<{ accessToken: string }> {
   return data;
 }
 
-async function getMe() {
+async function getMe(): Promise<Profile> {
   const accessToken = await getSecureStore("accessToken");
   const { data } = await axiosInstance.get("/auth/me", {
     headers: {
